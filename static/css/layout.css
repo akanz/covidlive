@@ -1,0 +1,267 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  overflow-x: hidden;
+  line-height: 1.8;
+}
+
+#myNavbar {
+  background-color: #2a265c !important;
+  color: whitesmoke !important;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+  text-decoration: none;
+}
+.w3-bar a:hover {
+  background-color: white !important;
+  color: #2a265c !important;
+  transition-duration: 0.4s;
+}
+
+.w3-sidebar .w3-button {
+  text-decoration: none;
+}
+.one {
+   background-image: url('../images/bg-img3.jpg');
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100vw;
+  color: white;
+}
+.one-title {
+  border-radius: 5px;
+  min-height: 100px;
+  height: auto;
+  text-align: center;
+  padding: 25px 40px;
+  margin: 10px auto;
+}
+.one-title h2 {
+  margin: 10px auto;
+}
+.one .btn {
+  padding: 10px 20px;
+}
+.one .btn i {
+  font-size: 25px;
+}
+
+.two{
+  margin-top: 50px;
+  height: auto;
+  min-height: 100px;
+  width: 100vw;
+  padding-top: 100px;
+}
+.two .total {
+  min-height: 100px;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  float: left;
+   width: 250px;
+   color: whitesmoke;
+   font-weight: bold;
+
+}
+.two .total span{
+   position: relative;
+   top: 0px;
+   left: 5px;
+   font-family: 'Alegreya Sans';
+   font-size: 25px;
+}
+.two .total i {
+  font-size: 22px;
+}
+.two .total:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.two .total1{
+  background-color: aliceblue;
+  width: 700px;
+  color: black;
+}
+.two .total2 {
+  background-color: sandybrown;
+  width: 340px;
+  color: midnightblue;
+}
+.two .total3 {
+  background-color: red;
+  color: azure;
+}
+.two .total4 {
+  background-color: seagreen;
+}
+.two .total5 {
+  background-color: deepskyblue;
+}
+.two .total6 {
+  background-color: firebrick;
+}
+
+input[type=search] {
+  width: 85%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  margin: 50px auto;
+}
+.three {
+  padding: 20px 40px;
+    background-color: beige;
+    margin-top: 50px;
+
+}
+.three-chart {
+ margin: 50px auto;
+    width: 70vw;
+    height: auto;
+    color: white;
+    background-color: bisque;
+    padding: 50px;
+}
+.four {
+  height: auto;
+  width: 100vw;
+  margin: 50px 0;
+  padding: 20px;
+
+}
+ .four-image {
+  margin: 10px auto;
+}
+.four-story {
+  padding: 30px 50px;
+
+}
+.four-story h5 {
+   font-family: 'Alegreya Sans';font-size: 22px;
+   line-height: 1.5;
+}
+.four-story a {
+  color: darkcyan;
+  text-decoration-line: none;
+}
+.five {
+  background-color: coral;
+  min-height: 200px;
+  height: auto;
+  width: 100vw;
+  padding: 20px;
+  color: black;
+}
+.five h2  {
+  font-weight: 800;
+}
+.five-contact {
+    width: 80vw;
+    margin: 10px auto;
+}
+.five-contact p {
+  margin-top: 30px;
+}
+.five-contact i {
+  font-size: 25px;
+  margin-right: 5px;
+}
+.five-contact a {
+  display: none;
+}
+.six {
+  height: auto;
+  background-image: url("../images/bg-img1.jpg");
+  color: white;
+}
+.six a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.six .fa {
+  padding: 10px;
+  font-size: 20px;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 3px;
+}
+.six .fa:hover {
+    opacity: 0.7;
+}
+.six .fa-whatsapp {
+  background-color: mediumseagreen;
+  color: white;
+}
+.six .fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.six .fa-instagram {
+  background: deeppink;
+  color: white;
+}
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 70px;
+  padding: 20px;
+}
+.footer i {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 600px){
+  .one {
+    width: 100vw;
+    padding: 0;
+  }
+  .one input[type=search] {
+    width: 60vw;
+    margin: 10px 0;
+    height: 50px;
+  }
+  .two {
+    margin: 50px auto;
+  }
+  .two .total {
+    width: 90vw;
+    margin: 10px  !important;
+  }
+  .three {
+    padding: 20px 0;
+}
+  .three-chart {
+  margin: 50px auto;
+  width: 100vw;
+  min-height: 200px;
+    height: auto;
+}
+  .four-image {
+  width: 70vw;
+}
+.four-story {
+  padding: 30px 20px;
+}
+.five-contact i {
+  margin: 10px 0;
+}
+.five-contact a {
+  display: block;
+}
+.five-contact span{
+  display: none;
+}
+}

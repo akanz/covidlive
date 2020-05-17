@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="manakanz">
+
+  <title>Covid-19 Live</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+   <!-- local css -->
+   <link rel="stylesheet" href="../static/css/layout.css">
+    <link rel="stylesheet" href="../static/css/chart.css">
+
+  <!-- Google Font -->
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- Charts js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- font-awesome kit -->
+    <script src="https://kit.fontawesome.com/63d8293e26.js" crossorigin="anonymous"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Navigation & Top Section -->
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">COVID-19 Live</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#chart" class="w3-bar-item w3-button">Charts</a>
+      <a href="#ncdc-contact" class="w3-bar-item w3-button"><i class="fas fa-university"></i>NCDC</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="open_nav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="close_nav()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#chart" onclick="close_nav()" class="w3-bar-item w3-button">Charts</a>
+  <a href="#ncdc-contact" onclick="close_nav()" class="w3-bar-item w3-button">NCDC</a>
+  <a href="#contact" onclick="close_nav()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<section class="one">
+  <div class="row">
+    <div class="col-md-10 one-title">
+       <h2>Get latest updates on Coronavirus in Nigeria and rest of the world</h2>
+       <form action="{{ url_for('result') }}" method="post">
+         <input type="search" name="text" placeholder="Search by country">
+         <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+       </form>
+    </div>
+  </div>
+</section>
+
+        {% block body %}
+
+        {% endblock %}
+
+
+  <!-- NCDC contact -->
+<section class="five" id="ncdc-contact">
+  <div class="five-contact">
+    <h2>NCDC connect centre</h2>
+    <p>
+    <div class="row">
+      <div class="col-md-3">
+          <i class="fas fa-phone-alt"></i>Call:  <a href="+2347036708970">+234 703 670 8970</a><span>+234 703 670 8970</span>
+      </div>
+      <div class="col-md-3">
+          <i class="fab fa-whatsapp"></i>Whatsapp: <a href="+2347087110839">+234 708 711 0839</a><span>+234 708 711 0839</span>
+      </div>
+      <div class="col-md-3">
+          <i class="fas fa-mobile-alt"></i>Toll Free Number: <a href="080097000010">0800 9700 0010</a><span>0800 9700 0010</span>
+      </div>
+      <div class="col-md-3">
+          <i class="fas fa-sms"></i>SMS Number: <a href="+2348099555577">+234 809 955 5577</a><span>+234 809 955 5577</span>
+      </div>
+    </div>
+
+    </p>
+  </div>
+</section>
+
+<!-- contact section -->
+<section class="six" id="contact">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+       <a href="https://www.instagram.com/choc_papi/" target="_blank"><i class="fa fa-instagram"></i>choc_papi</a><br>
+       <a href="https://www.snapchat.com/manakanz" target="_blank"><i class="fa fa-snapchat-ghost"></i> manakanz</a><br>
+        <a href="https://api.whatsapp.com/send?phone=2349073955922&text=Hi, got your number from your website" target="_blank"><i class="fa fa-whatsapp"></i> +2349073955922</a><br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <footer class="footer">
+   copyright manakanz <i class="far fa-copyright"></i><span></span>
+ </footer>
+
+<script>
+     var d = new Date();
+     document.querySelector(".footer span").innerHTML = d.getFullYear();
+
+    //Function for user profile popover
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover({html:true});
+
+    <!-- Pie chart script -->
+    console.log('I am a Software Developer');
+    var new_data = {{ new_data|tojson }};
+    var cases, figures;
+       //convert the figures to typeof(Number)
+        var newObject ={};
+        $.each( new_data, function( key, value ) {
+        newObject[key]=parseInt(value, 10);
+        });
+        console.log(newObject);
+
+        //Get the data for cases and the figures for each of them respectively
+        figures = Object.values(newObject);
+        cases = Object.keys(newObject);
+
+        var active_cases,rec_cases,death_cases,confirmed;
+
+        confirmed = newObject.TotalConfirmed;
+        rec_cases = newObject.TotalRecovered;
+        death_cases = newObject.TotalDeaths;
+        active_cases = confirmed - rec_cases - death_cases;
+
+        //Get the percentage of deaths, recovered and active cases respectively
+        var deaths = percents(newObject.TotalDeaths);
+        var recovered = percents(newObject.TotalRecovered);
+        var active = parseFloat(100 - deaths - recovered).toFixed(2);
+        console.log(deaths,recovered,active);
+
+        //function to convert the figures to percentage
+        function percents(num) {
+          var ans = parseFloat((num/newObject.TotalConfirmed)*100).toFixed(2);
+          return ans;
+        }
+
+
+    console.log(cases);
+    console.log(figures);
+    console.log(new_data);
+
+    var speedCanvas = document.getElementById("pie-chart");
+
+Chart.defaults.global.defaultFontFamily = 'Roboto';
+Chart.defaults.global.defaultFontSize = 12;
+Chart.defaults.global.defaultFontStyle = 'Normal';
+Chart.defaults.global.defaultFontColor = '#FFFFFF';
+
+var speedData = {
+  labels: ['Recovered','Active','Deaths'],
+  datasets: [
+    {
+      label:'',
+      backgroundColor: ["#14F4C9", "#91354d","#ecab4d","#3e95cd", "#ec354d","#3cba9f","#e8c3b9","#c45850",'#6a8200',
+                    '#c6829f','#e45930','#fdfffe','#f7827c'],
+ data: [recovered,active,deaths]
+   }
+  ]
+};
+
+var chartOptions = {
+    title: {
+        display: true,
+        text: 'Coronavirus stats in percentage',
+        fontColor: '#000000',
+    },
+    legend: {
+        display: false
+    },
+};
+
+var pieChart = new Chart(speedCanvas, {
+  type: 'pie',
+  data: speedData,
+  options: chartOptions
+    });
+
+
+    // Bar chart script
+
+var speedCanvas = document.getElementById("bar-chart");
+
+Chart.defaults.global.defaultFontFamily = 'Roboto';
+Chart.defaults.global.defaultFontSize = 12;
+Chart.defaults.global.defaultFontStyle = 'Normal';
+
+
+var speedData = {
+  labels: ['Recovered','Active','Deaths'],
+  datasets: [
+    {
+      label: "Number of cases",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+        data: [rec_cases,active_cases,death_cases]
+    }
+  ]
+};
+
+var chartOptions = {
+    title: {
+        display: true,
+        text: 'Coronavirus stats till date',
+        fontColor: '#000000',
+    },
+    legend: {
+        display: false
+    },
+
+  scales: {
+    xAxes: [{
+        gridLines: {
+            display: true,
+            color:'#517BB7',
+        },
+
+        ticks: {
+            fontColor:"black",
+        },
+
+
+    }],
+
+    yAxes: [{
+        gridLines: {
+            display: true,
+            color:'#517BB7',
+        },
+
+        ticks: {
+            fontColor:"black",
+        }
+  }],
+    }
+};
+
+var groupBarChart = new Chart(speedCanvas, {
+  type: 'bar',
+  data: speedData,
+  options: chartOptions
+});
+});
+</script>
+
+
+
+
+
+     <!-- Bootstrap core JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- local js -->
+<script src="../static/js/layout.js"></script>
+<script src="../static/js/chart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.chartjs-render-monitor {
+
+}
+
+@media screen and (max-width: 600px){
+    .chartjs-render-monitor {
+        margin: 10px auto !important;
+        width: 90vw;
+    }
+}

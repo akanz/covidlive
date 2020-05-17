@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <section class="two">
+    <div class="row">
+      <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="total total1">
+            <h3><i class="fas fa-viruses"></i> Global Confirmed cases : <span> {{ new_data['TotalConfirmed'] }}</span></h3>
+          </div>
+          <div class="total total2">
+            <h3><i class="fas fa-viruses"></i>New recovered: <span>{{ new_data['NewRecovered'] }}</span></h3>
+          </div>
+          <div class="total total3">
+            <h3><i class="fas fa-viruses"></i>Total deaths <span>{{ new_data['TotalDeaths'] }}</span></h3>
+          </div>
+          <div class="total total4">
+            <h3><i class="fas fa-viruses"></i>Total recovered <span>{{ new_data['TotalRecovered'] }}</span></h3>
+          </div>
+          <div class="total total5">
+            <h3><i class="fas fa-viruses"></i>New cases <span>{{ new_data['NewConfirmed'] }}</span></h3>
+          </div>
+          <div class="total total6">
+            <h3><i class="fas fa-viruses"></i>New deaths <span>{{ new_data['NewDeaths'] }}</span></h3>
+          </div>
+      </div>
+      <div class="col-md-1"></div>
+  </div>
+</section>
+
+<!-- story section -->
+<section class="four">
+ <div class="four-image">
+   <img src="../static/images/four.jpg" class="mx-auto d-block img-fluid">
+ </div>
+ <div class="four-story">
+  <p>
+   <h5>A novel strain of coronavirus — SARS-CoV-2 — was first detected in December 2019 in Wuhan, a city in China’s Hubei province with a population of 11 million, after an outbreak of pneumonia without an obvious cause. The virus has now spread to over 200 countries and territories across the globe, and was characterised as a pandemic by the World Health Organization (WHO) on 11 March 2020</h5>
+
+     <h5>
+      <p>
+          What are coronaviruses?
+SARS-CoV-2 belongs to a family of single-stranded RNA viruses known as coronaviridae, a common type of virus which affects mammals, birds and reptiles.
+      </p>
+
+    <p>
+      In humans, it commonly causes mild infections, similar to the common cold, and accounts for 10–30% of upper respiratory tract infections in adults[4]. More serious infections are rare, although coronaviruses can cause enteric and neurological disease[5]. The incubation period of a coronavirus varies but is generally up to two weeks[6].
+    </p>
+
+    <p>
+      Previous coronavirus outbreaks include Middle East respiratory syndrome (MERS), first reported in Saudi Arabia in September 2012, and severe acute respiratory syndrome (SARS), identified in southern China in 2003[7],[8]. MERS infected around 2,500 people and led to more than 850 deaths while SARS infected more than 8,000 people and resulted in nearly 800 deaths[9],[10]. The case fatality rates for these conditions were 35% and 10%, respectively.
+    </p>
+
+    <p>
+      SARS-CoV-2 is a new strain of coronavirus that has not been previously identified in humans. Although the incubation period of this strain is currently unknown, the United States Centers for Disease Control and Prevention indicate that symptoms may appear in as few as 2 days or as long as 14 days after exposure[6]. Chinese researchers have indicated that SARS-CoV-2 may be infectious during its incubation period[11
+    </p>
+     </h5>
+   </p>
+
+   <img src="../static/images/five.jpeg" class="img-fluid mx-auto d-block">
+
+   <p>
+    <h5>
+       <strong>How contagious is COVID-19?</strong>
+        <p>
+         Increasing numbers of confirmed diagnoses, including in healthcare professionals, has indicated that person-to-person spread of SARS-CoV-2 is occurring[15]. The preliminary reproduction number (i.e. the average number of cases a single case generates over the course of its infectious period) is currently estimated to be between 1.4 to 2.5, meaning that each infected individual could infect between 1.4 and 2.5 people[16].
+       </p>
+
+  <p>
+   Similarly to other common respiratory tract infections, MERS and SARS are spread by respiratory droplets produced by an infected person when they sneeze or cough[17]. Measures to guard against the infection work under the current assumption that SARS-CoV-2 is spread in the same manner.
+  </p>
+
+  <p>
+   <strong> How is COVID-19 diagnosed?</strong><p>
+     As this coronavirus affects the respiratory tract, common presenting symptoms include fever and dry cough, with some patients presenting with respiratory symptoms (e.g. sore throat, nasal congestion, malaise, headache and myalgia) or even struggling for breath.
+   </p>
+  </p>
+
+  <p>
+    In severe cases, the coronavirus can cause pneumonia, severe acute respiratory syndrome, kidney failure and death[18].
+  </p>
+
+  <p>
+    The case definition for COVID-19 was amended on 13 March 2020 and is now based on symptoms regardless of travel history or contact with confirmed cases. Diagnosis is suspected in patients requiring admission to hospital with signs and symptoms of pneumonia, acute respiratory distress syndrome or influenza, and in those with a new, continuous cough or fever who are well enough to stay in the community (see Box 1). A diagnostic test has been developed, and countries are quarantining suspected cases
+  </p>
+  </h5>
+   </p>
+
+   <img src="../static/images/tip2.png" class="img-fluid d-block mx-auto">
+
+        <p>
+          <h3>Methods to reduce the risk of infection</h3>
+            <p>
+              <h5>
+                The principle measure is frequent hand washing – with soap and water or with an alcohol-based gel. The hands must be washed for at least 20 seconds, ensuring the soap makes good contact with all surfaces, before the hands are fully rinsed. A distance of at least one metre must be maintained from other people, with particular caution being taken if someone is sneezing, coughing or has a temperature. It is important to avoid touching the eyes, nose or mouth; the nose and mouth should be covered with tissue paper when coughing or sneezing, or with the inside of the elbow where no tissue is available. Where a tissue has been used it should be thrown away immediately and the hands washed. It is important to avoid gatherings of large groups. Any individual showing any symptoms of the disease should be isolated as much as possible until they recover, wearing a mask to avoid infecting others.
+              </h5>
+            </p>
+            <p>
+            <h5>
+              <a href="https://ncdc.gov.ng/" target="_blank">Here is what Nigeria is doing about the pandemic.</a>
+            </h5>
+            </p>
+        </p>
+ </div>
+</section>
+
+    <!-- chart section -->
+<section class="three" id="chart">
+      <div class="three-chart">
+          <canvas id="bar-chart" width="600" height="450"></canvas>
+      </div>
+
+      <div class="three-chart">
+        <canvas id="pie-chart" width="800" height="450"></canvas>
+      </div>
+</section>
+
+
+{% endblock %}
+
+

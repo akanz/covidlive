@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <section class="two">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+          <div class="total total1">
+            <h3><i class="fas fa-viruses"></i> Global Confirmed cases : <span> {{ new_data['TotalConfirmed'] }}</span></h3>
+          </div>
+          <div class="total total2">
+            <h3><i class="fas fa-viruses"></i>New recovered: <span>{{ new_data['NewRecovered'] }}</span></h3>
+          </div>
+          <div class="total total3">
+            <h3><i class="fas fa-viruses"></i>Total deaths <span>{{ new_data['TotalDeaths'] }}</span></h3>
+          </div>
+          <div class="total total4">
+            <h3><i class="fas fa-viruses"></i>Total recovered <span>{{ new_data['TotalRecovered'] }}</span></h3>
+          </div>
+          <div class="total total5">
+            <h3><i class="fas fa-viruses"></i>New cases <span>{{ new_data['NewConfirmed'] }}</span></h3>
+          </div>
+          <div class="total total6">
+            <h3><i class="fas fa-viruses"></i>New deaths <span>{{ new_data['NewDeaths'] }}</span></h3>
+          </div>
+      </div>
+      <div class="col-md-1"></div>
+  </div>
+</section>
+
+
+<section class="three">
+  <div class="three-chart">
+    <canvas id="line-chart" width="700" height="400"></canvas>
+  </div>
+  <div class="three-chart">
+    <canvas id="pie-chart" width="800" height="450"></canvas>
+  </div>
+</section>
+{% endblock %}
