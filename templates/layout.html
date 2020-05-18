@@ -73,6 +73,7 @@
        <form action="{{ url_for('result') }}" method="post">
          <input type="search" name="text" placeholder="Search by country">
          <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+           <div class="error"> {% include 'includes/_messages.html' %} </div>
        </form>
     </div>
   </div>
@@ -158,6 +159,7 @@
         newObject[key]=parseInt(value, 10);
         });
         console.log(newObject);
+        console.log(new_data);
 
         //Get the data for cases and the figures for each of them respectively
         figures = Object.values(newObject);

@@ -48,6 +48,10 @@ body, html {
 .one .btn i {
   font-size: 25px;
 }
+.one .error {
+  width: 30%;
+  margin: 2px auto;
+}
 
 .two{
   margin-top: 50px;
@@ -232,7 +236,12 @@ input[type=search] {
     width: 60vw;
     margin: 10px 0;
     height: 50px;
+    padding-left: 5px;
   }
+  .one .error {
+  width: 90%;
+  margin: 0 auto;
+}
   .two {
     margin: 50px auto;
   }
