@@ -1,7 +1,8 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, logging,request
 import requests, json
 from datetime import date
-from config import config
+from config.config_dev import secret_key
+
 
 app = Flask(__name__)
 
@@ -62,5 +63,5 @@ def error():
 
 
 if __name__ == '__main__':
-    app.secret_key = config.secret_key
+    app.secret_key = secret_key
     app.run(debug=True)
