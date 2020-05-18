@@ -1,8 +1,7 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, logging,request
 import requests, json
 from datetime import date
-from config import secret_key
-
+from config.config import secret_key
 
 app = Flask(__name__)
 
