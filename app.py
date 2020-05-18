@@ -46,11 +46,11 @@ def result():
                     return render_template('result.html',new_data=new_data)
             else:
                 app.logger.error('Error {} occurred'.format(str(resp.status_code)))
-                flash('something went wrong, try again.', 'danger')
+                #flash('something went wrong, try again.', 'danger')
                 return redirect(url_for('error'))
         except:
             app.logger.error('Invalid response')
-            flash('Oops! There must be a connection error', 'warning')
+            #flash('Oops! There must be a connection error', 'warning')
             return redirect(url_for('home'))
 
     return result()
@@ -62,5 +62,5 @@ def error():
 
 
 if __name__ == '__main__':
-    app.secret_key = '98765ewdsfgbnmjhgfdssdfuiopi765432456789yutfdghjk'
+    #app.secret_key = '98765ewdsfgbnmjhgfdssdfuiopi765432456789yutfdghjk'
     app.run(debug=True)
