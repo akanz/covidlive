@@ -1,1 +1,1 @@
-web: gunicorn covidlivescores:app
+web: gunicorn app:app
