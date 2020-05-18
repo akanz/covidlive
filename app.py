@@ -62,5 +62,5 @@ def error():
 
 
 if __name__ == '__main__':
-    app.secret_key = secret_key
+    app.secret_key = '98765ewdsfgbnmjhgfdssdfuiopi765432456789yutfdghjk'
     app.run(debug=True)
