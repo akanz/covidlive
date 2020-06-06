@@ -5,7 +5,7 @@ from datetime import date
 
 
 app = Flask(__name__)
-
+app.secret_key = os.environ.get('covidlive_secret_key')
 today = str(date.today())
 
 
@@ -93,5 +93,4 @@ def error():
 
 
 if __name__ == '__main__':
-    app.secret_key = os.environ.get('covidlive_secret_key')
     app.run(debug=True)
