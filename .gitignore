@@ -276,5 +276,4 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/flask,python,pycharm,windows
 
 #ignore config.py
-config.py
 config_dev.py
