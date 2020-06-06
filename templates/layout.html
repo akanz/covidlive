@@ -70,6 +70,7 @@
   <div class="row">
     <div class="col-md-10 one-title">
        <h2>Get latest updates on Coronavirus in Nigeria and rest of the world</h2>
+        <div class="error">{% include 'includes/_messages.html' %}</div>
        <form action="{{ url_for('result') }}" method="post">
          <input type="search" name="text" placeholder="Search by country">
          <button class="btn btn-primary"><i class="fas fa-search"></i></button>

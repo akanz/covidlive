@@ -31,6 +31,7 @@ body, html {
   width: 100vw;
   color: white;
 }
+
 .one-title {
   border-radius: 5px;
   min-height: 100px;
@@ -226,6 +227,16 @@ input[type=search] {
 .footer i {
   margin-left: 5px;
   margin-right: 5px;
+}
+@media screen and (max-width: 768px){
+  .two .total1 {
+    width: 80vw !important;
+    margin: 5px auto;
+  }
+  /*.two .total{*/
+  /*  width: 40vw;*/
+  /*  margin: 5px auto;*/
+  /*}*/
 }
 @media screen and (max-width: 600px){
   .one {
