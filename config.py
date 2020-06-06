@@ -2,7 +2,7 @@ import os
 
 class BaseConfig(object):
     DEBUG = False
-    SECRET_KEY = '5467890ydfshgjkljgrew2345678908trdfgjhk'
+    SECRET_KEY = os.environ.get('covidlive_secret')
 
 class DevConfig(BaseConfig):
     DEBUG = True
