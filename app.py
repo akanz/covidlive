@@ -5,10 +5,10 @@ from datetime import date
 
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('covidlive_secret_key')
+app.config.from_object(os.environ['covidlive_settings'])
 today = str(date.today())
 
-
+print(app.config)
 @app.route('/', methods=['GET','POST'])
 def home():
     res = requests.get('https://api.covid19api.com/summary')
@@ -93,4 +93,4 @@ def error():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
